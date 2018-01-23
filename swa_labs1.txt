@@ -1,0 +1,10 @@
+session 1:we learnt to give commands to the editor to get things done in command mode
+learnt how to delete character (x)
+leant how to undo the command(u) and how to undo the whole command (U)
+learnt how to redo (CTRL-R)
+to open a line abover cursor (O)
+R to replace more than once character 
+to move to the bottom of the file (G)
+ce- deletes the word and places you in insert mode
+and many more..
+
