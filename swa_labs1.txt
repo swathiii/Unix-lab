@@ -5,6 +5,13 @@ learnt how to redo (CTRL-R)
 to open a line abover cursor (O)
 R to replace more than once character 
 to move to the bottom of the file (G)
-ce- deletes the word and places you in insert mode
-and many more..
-
+ce deletes the word and places you in insert mode
+:wq to save and exit
+:q! trash all changes
+0 to move start of the line
+d2w deletes two words (d5w deletes five words and so on)
+p puts previously delted text after the cursor 
+r to replace the letter (rx to replace letter x)
+gg to move start of the file
+G to move to the bottom of the file
+? forward search
