@@ -1,0 +1,18 @@
+excuted basic unix commands:
+
+who - lists who is logged on your machine
+
+cal - prints calendar
+
+uname - prints the name, version and other details about the current machine and the operating system running it. 
+
+date - gives you the current date and time
+ 
+time - prints last system clock change
+
+ls - lists your files
+
+ls-l - lists your files in long format 
+
+ls-a - lists all files including the ones whose filenames begin with a dot
+
