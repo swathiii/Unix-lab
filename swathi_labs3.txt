@@ -1,0 +1,23 @@
+learnt filter commands
+head:output the first part of files
+    -n, prints the first NUM of lines instead of the first 10
+                          
+tail: prints the last 10 lines of each FILE to standard output.
+
+sort: sort lines of text files
+wc: prints newline, word and byte counts for each file
+paste: merge lines of files
+cut: remove sections from each line of files
+uniq: report or omit repeated lines
+ 
+Q1- display the column of filename.csv without printing the header "CGPS" also sort the same
+
+Q2-display only current time using date command 
+
+Q3- use unique with all possible options 
+
+Q4- print number of lines for ls-l command 
+ 
+Q5- display USN from 7-14  along with other fields 
+
+
