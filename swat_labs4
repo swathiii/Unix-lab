@@ -1,0 +1,44 @@
+1. write a shell script to display only date and time from date command
+
+ date +"%D %T"
+
+2.write a shell script to check whether a number is positive or negative
+
+echo "enter a number"
+read num
+if test $num -eq 0
+then
+        echo"number is 0"
+elif test $num -gt 0
+then
+        echo "number is positive"
+else
+        echo"number is negative"
+fi
+
+3. write a shell script to post student's grade
+[above  90-A
+	80-B
+	70-C
+	60-D
+	else FAIL
+]
+
+echo " enter your marks"
+read n
+if [ "$n" -ge 90 ]
+then
+echo " you've got A grade"
+elif [ "$n" -ge 80 ]
+then
+        echo "you've got B grade"
+elif [ "$n" -ge 70 ]
+then
+        echo "you've got C grade"
+elif [ "$n" -ge 60]
+then
+        echo "you've got D grade"
+else
+        echo "FAIL"
+fi
+
