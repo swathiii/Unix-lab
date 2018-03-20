@@ -1,0 +1,32 @@
+1. to display employee details of manager
+
+  sed -n 'p' emp.lst | grep -i "manager"
+
+  101 |simmi | 	manager| sales |02/01/02 |30000
+ 
+2. display 1st and 2nd employee details
+
+  sed -n '1,2p' emp.lst
+
+  100 |kate |director |production| 05/06/05 |60000
+  101 |simmi | 	manager| sales |02/01/02 |30000 
+
+3. display all the emplyoee details by replacing |by :
+  
+  sed 's/|/:/g'emp.lst
+
+  100:kate:director:production:05/06/05:60000
+  101:simmi:manager:sales: 02/01/02:30000
+  102:jack:Manager :marketing:20/08/15:45000
+  103:sawyer:clerk :Purchasing:30/12/14:20000
+  104:lilly:project manager:Human Resource Management:04/07/09:50000
+  105:hugo :production manager :Accounting and Finance:09/11/14:55000
+
+4.display only the names
+  
+  awk -F "|" NR==1,NR==3'{print $2,$6}' emp.lst
+
+  kate
+  simmi
+  jack 
+
