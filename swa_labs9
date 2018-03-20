@@ -1,0 +1,24 @@
+1. write a shell scrpit to search for a particular word or phrase in any or all documents in  your computer 
+
+grep -rl requiredword 
+
+2. write a shell script to delete all the blank lines in a file 
+
+sed '/^$/d' filename
+
+3. write a shell script to print only the odd numbered lines of a file 
+
+awk 'NR%2!=0' filename 
+
+4. write an equivalent awk command for 
+	a) head -n 5 filename 
+		
+		awk 'FNR <= 5' filename 
+
+	b) sed -n '5,10p' filename 
+
+		awk 'NR>=5&&NR<=10' filename 
+
+	c) tail +20 filename 
+
+		awk 'NR>=20' filename 
