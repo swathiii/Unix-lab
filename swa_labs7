@@ -1,0 +1,68 @@
+cat > emp.lst
+1223|saxena|director|accounts|12/02/98/30000
+2356|saksena|manager|marketing|12/03/78/40000
+4356|jai|director|sales|13/08/76/50000
+
+user@user:~$ sed -n 1,2p emp.lst
+1223|saxena|director|accounts|12/02/98/30000
+2356|saksena|manager|marketing|12/03/78/40000
+user@user:~$ sed -n 1q emp.lst
+
+user@user:~$ sed '1q' emp.lst
+1223|saxena|director|accounts|12/02/98/30000
+
+user@user:~$ sed -n '$p' emp.lst
+4356|jai|director|sales|13/08/76/50000
+
+user@user:~$ sed -n '/director/p' emp.lst
+1223|saxena|director|accounts|12/02/98/30000
+4356|jai|director|sales|13/08/76/50000
+
+
+user@user:~$ sed 's\|\:\g' emp.lst
+1223:saxena:director:accounts:12/02/98/30000
+2356:saksena:manager:marketing:12/03/78/40000
+4356:jai:director:sales:13/08/76/50000
+
+user@user:~$ sed 's/|/:/g' emp.lst
+1223:saxena:director:accounts:12/02/98/30000
+2356:saksena:manager:marketing:12/03/78/40000
+4356:jai:director:sales:13/08/76/50000
+
+user@user:~$ cat emp.lst 
+1223|saxena|director|accounts|12/02/98/30000
+2356|saksena|manager|marketing|12/03/78/40000
+4356|jai|director|sales|13/08/76/50000
+
+user@user:~$ awk '/sales/{print}' emp.lst
+4356|jai|director|sales|13/08/76/50000
+
+user@user:~$ cat emp.lst
+1223|saxena|director|accounts|12/02/98/30000
+2356|saksena|manager|marketing|12/03/78/40000
+4356|jai|director|sales|13/08/76/50000
+
+user@user:~$ cat >> emp.lst
+4747|sai|manager|sales|15/06/78/89999
+
+user@user:~$ awk '/sales/{print}' emp.lst
+4356|jai|director|sales|13/08/76/50000
+4747|sai|manager|sales|15/06/78/89999
+
+user@user:~$ awk '/sales/' emp.lst
+4356|jai|director|sales|13/08/76/50000
+4747|sai|manager|sales|15/06/78/89999
+
+user@user:~$ cat emp.lst
+1223|saxena|director|accounts|12/02/98/30000
+2356|saksena|manager|marketing|12/03/78/40000
+4356|jai|director|sales|13/08/76/50000
+4747|sai|manager|sales|15/06/78/89999
+
+user@user:~$ awk -F "|" '/sa[xk]s*ena/{print}' emp.lst
+1223|saxena|director|accounts|12/02/98/30000
+2356|saksena|manager|marketing|12/03/78/40000
+user@user:~$ awk -F NR==1,NR==3 '{print $2,$6}' emp.lst
+ 
+ 
+
